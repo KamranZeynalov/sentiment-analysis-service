@@ -39,20 +39,6 @@ This project provides a serverless REST API for sentiment analysis using AWS Com
 
 ---
 
-
-
-## 📘 Overview
-
-This project demonstrates a **serverless sentiment analysis API** built with:
-- 🧠 **AWS Comprehend** for NLP
-- ☁️ **AWS Lambda + API Gateway** for compute and routing
-- 🧱 **AWS SAM** for infrastructure as code
-- ⚙️ **Java 17** as the core language
-
-Just send a POST request with a text string, and receive a sentiment label (`POSITIVE`, `NEGATIVE`, `NEUTRAL`, or `MIXED`) along with confidence scores.
-
----
-
 ## 🔍 How It Works
 
 1. You call the `/analyze` endpoint with a sentence
