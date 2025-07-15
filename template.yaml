@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Sentiment Analysis Service
+
+
+Globals:
+  Function:
+    Runtime: java17
+    Timeout: 10
+    MemorySize: 512
+
+Resources:
+  AnalyzeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.company.analyze.AnalyzeHandler::handleRequest
+      CodeUri: .
+      Events:
+        AnalyzeApi:
+          Type: Api
+          Properties:
+            Path: /analyze
+            Method: post
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - comprehend:DetectSentiment
+              Resource: "*"
+
+Outputs:
+  ApiUrl:
+    Description: "Invoke URL"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/analyze"
