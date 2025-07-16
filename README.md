@@ -15,7 +15,6 @@ This project provides a serverless REST API for sentiment analysis using AWS Com
 ## 📚 Table of Contents
 
 - [Tech Stack](#-tech-stack)
-- [Overview](#-overview)
 - [How It Works](#-how-it-works)
 - [API Usage](#-api-usage)
 - [Live Demo](#-live-demo)
@@ -27,7 +26,7 @@ This project provides a serverless REST API for sentiment analysis using AWS Com
 
 ---
 
-## 🛠️ Tech Stack
+## 📖 Tech Stack
 
 - **Language:** Java 17
 - **Build Tool:** Maven
@@ -109,7 +108,7 @@ sam deploy --guided
 
 ---
 
-## 🖼️ Screenshots
+## 📌 Screenshots
 
 ### 🚀 API Gateway
 ![API Gateway](assets/aws-api-gateway.PNG)
